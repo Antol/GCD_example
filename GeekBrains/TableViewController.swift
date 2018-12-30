@@ -12,6 +12,8 @@ import AlamofireImage
 
 class TableViewController: UITableViewController {
     
+    lazy var photoService = { PhotoService(container: tableView) }()
+    
     let imageUrls = ["https://purr.objects-us-east-1.dream.io/i/img_20161219_194821.jpg",
                      "https://purr.objects-us-east-1.dream.io/i/img_20160205_103655.jpg",
                      "https://purr.objects-us-east-1.dream.io/i/marthaanddotty.jpg",
@@ -26,6 +28,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,9 +37,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TableViewCell.self), for: indexPath) as! TableViewCell
-        Alamofire.request(URL(string: imageUrls[indexPath.row])!).responseImage { response in
-            cell.catImageView.image = response.result.value
-        }
+        cell.catImageView.image = photoService.photo(atIndexpath: indexPath, byUrl: imageUrls[indexPath.row])
         return cell
     }
     
