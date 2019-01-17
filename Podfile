@@ -8,5 +8,6 @@ target 'GeekBrains' do
   # Pods for GeekBrains
   pod 'Alamofire', '~> 4'
   pod 'AlamofireImage'
+  pod 'PinLayout'
 
 end

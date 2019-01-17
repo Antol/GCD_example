@@ -2,20 +2,24 @@ PODS:
   - Alamofire (4.8.0)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - PinLayout (1.8.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4)
   - AlamofireImage
+  - PinLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - PinLayout
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  PinLayout: fe2a2432d6982588e208572005c941aeeae417ab
 
-PODFILE CHECKSUM: 8119462b6f2cc92ba722f48316b08659e24aeb6e
+PODFILE CHECKSUM: d83ce51fdb76fb3ed26f714c815feaeb82ce050e
 
 COCOAPODS: 1.5.3
